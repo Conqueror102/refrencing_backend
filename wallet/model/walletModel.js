@@ -6,14 +6,14 @@ const walletSchema = new Schema({
         required: true
     },
     balance: {
-        type: String,
+        type: Number,
         required: true
     },
     currency:{
         type: String,
         required: true
     },
-     user: {
+     user:{
         type: Schema.Types.ObjectId,
         ref: "user"
        }
@@ -21,4 +21,4 @@ const walletSchema = new Schema({
 
  
 
-module.exports = model("user", walletSchema);
+module.exports = model("wallet", walletSchema);

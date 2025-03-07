@@ -15,10 +15,10 @@ const userSchema = new Schema({
     },
      wallet: {
         type: Schema.Types.ObjectId,
-        ref: "details"
+        ref: "wallet"
        }
 });
 
  
 
-module.exports = model("user", userSchema);
+module.exports = model("userCreate", userSchema);

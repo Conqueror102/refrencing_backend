@@ -16,8 +16,10 @@ const createWallet = async (req, res) => {
         })
         await create.save()
         find.wallet = create._id
-        find.save();
+        await find.save();
+        return res.status(201).json({ message: "Wallet created successfully", wallet: create });
     }catch(err){
+        console.log(err);
         return res.status(500).json({error:err.message});
     }
 };

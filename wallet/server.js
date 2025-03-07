@@ -10,12 +10,12 @@ const port = PORT
 
 app = express()
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 
 connectDB();
 
 app.use('/api', userRoute);
-app.use("/api", walletRoute);
+app.use("/api/wallet", walletRoute);
 
 app.listen(port,()=>{
     console.log(new Date().toLocaleDateString(),port);
