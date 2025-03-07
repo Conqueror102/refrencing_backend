@@ -1,8 +1,8 @@
 const express = require('express');
 require("dotenv/config");
 const connectDB = require('./CONFIG/db');
-const userRouter = require('./ROUTES/userRoutes');
-const detailRouter = require('./ROUTES/detailRoute');
+const userRouter = require('./wallet/routes/userRoute');
+const detailRouter = require('./wallet/routes/detailRoute');
 const morgan = require('morgan');
 
 const { PORT } = process.env;
